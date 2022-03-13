@@ -20,8 +20,9 @@
 // Virtual LCD
 cv::Mat g_canvas( cv::Size( LCD_WIDTH, LCD_HEIGHT ), CV_8UC3 );
 
+
 // Put color pixel on LCD (canvas)
-void lcd_put_pixel( int t_x, int t_y, int t_rgb_565 )
+void lcd_put_pixel( int32_t t_x, int32_t t_y, uint16_t t_rgb_565 )
 {
     // Transform the color from a LCD form into the OpenCV form. 
     cv::Vec3b l_rgb_888( 
@@ -32,18 +33,14 @@ void lcd_put_pixel( int t_x, int t_y, int t_rgb_565 )
     g_canvas.at<cv::Vec3b>( t_y, t_x ) = l_rgb_888; // put pixel
 }
 
-// Clear LCD
-void lcd_clear()
-{
-    cv::Vec3b l_black( 0, 0, 0 );
-    g_canvas.setTo( l_black );
-}
 
 // LCD Initialization 
 void lcd_init()
 {
     cv::namedWindow( LCD_NAME, 0 );
-    lcd_clear();
+    cv::Vec3b l_black( 0, 0, 0 );
+    g_canvas.setTo( l_black );
+
     cv::waitKey( 1 );
 }
 

@@ -20,10 +20,12 @@ struct Point2D
     int32_t x, y;
 };
 
+
 struct RGB
 {
     uint8_t r, g, b;
 };
+
 
 class GraphElement
 {
@@ -71,13 +73,14 @@ public:
     // Center of circle
     Point2D m_center;
     // Radius of circle
-    int32_t radius;
+    int32_t m_radius;
 
     Circle( Point2D t_center, int32_t t_radius, RGB t_fg, RGB t_bg ) : 
-        GraphElement( t_fg, t_bg ), m_center( t_center ), radius( t_radius ) {}
+        GraphElement( t_fg, t_bg ), m_center( t_center ), m_radius( t_radius ) {}
 
     void draw() { } // IMPLEMENT!!!
 };
+
 
 class Character : public GraphElement 
 {
@@ -93,6 +96,7 @@ public:
     void draw() { }; // IMPLEMENT!!!
 };
 
+
 class Line : public GraphElement
 {
 public:
@@ -104,4 +108,5 @@ public:
 
     void draw() {  }; // IMPLEMENT!!!
 };
+
 

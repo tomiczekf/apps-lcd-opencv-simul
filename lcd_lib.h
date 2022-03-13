@@ -25,10 +25,7 @@
 extern cv::Mat g_canvas;
 
 // Put color pixel on LCD (canvas)
-void lcd_put_pixel( int t_x, int t_y, int t_rgb_565 );
-
-// Clear LCD
-void lcd_clear();
+void lcd_put_pixel( int32_t t_x, int32_t t_y, uint16_t t_rgb_565 );
 
 // LCD Initialization 
 void lcd_init();
