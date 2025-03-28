@@ -21,7 +21,7 @@ all: $(PROGRAM)
 
 endif
 
-$(PROGRAM): $(PROGRAM).cpp lcd_lib.cpp lcd_lib.h graph_class.hpp graph_struct.hpp
+$(PROGRAM): $(PROGRAM).cpp lcd_lib.cpp lcd_lib.h graph_class.hpp 
 	g++ $(CPPFLAGS) $(PROGRAM).cpp lcd_lib.cpp -o $@ $(LDFLAGS) $(LDLIBS)
 
 clean: 
