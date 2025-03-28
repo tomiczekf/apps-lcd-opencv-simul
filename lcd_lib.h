@@ -15,8 +15,8 @@
 
 #include <opencv2/opencv.hpp>
 
-#define LCD_WIDTH       320
-#define LCD_HEIGHT      240
+#define LCD_WIDTH       480
+#define LCD_HEIGHT      320
 #define LCD_NAME        "Virtual LCD"
 
 // LCD Simulator

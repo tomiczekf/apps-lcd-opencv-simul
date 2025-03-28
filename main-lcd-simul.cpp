@@ -17,9 +17,7 @@
 
 #include "lcd_lib.h"
 #include "font8x8.h"
-
-//#include "graph_struct.hpp"
-//#include "graph_class.hpp"
+#include "graph_class.hpp"
 
 int main()
 {
@@ -31,7 +29,7 @@ int main()
     uint16_t l_color_white = 0xFFFF;
 
     // simple animation display four color square using LCD_put_pixel function
-    int l_limit = 200;
+    int l_limit = LCD_HEIGHT - 40;
     for ( int ofs = 0; ofs < 20; ofs++ ) // square offset in x and y axis
     {
         for ( int i = 0; i < l_limit; i++ )
